@@ -1,0 +1,144 @@
+//Typography
+$font-stack: 'OpenTextSans', Helvetica, Arial, sans-serif;
+$code-stack: 'Roboto Mono', monospace;
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+//Type sizes:
+$base-font-size: 1em;
+$base-line-height: 1.5em;
+
+$h1-size: 3rem;
+$h2-size: 1.5rem;
+$h3-size: 1rem;
+$hero-size: 4rem;
+
+
+//Layout
+$max-site-width: 1200px;
+
+//colours
+    //Primary
+    $ot-indigo: #2E3D98;
+    $ot-navy: #111B58;
+
+    //Secondary
+    $ot-plum: #4F3690;
+    $ot-teal: #00B8BA;
+    $ot-light-blue: #09BCEF;
+    $ot-steel: #7E929F;
+    $ot-cloud: #E1E8F6;
+    $light-grey: #F5F5F5;
+    $med-grey: #777777;
+    $dark-grey: #333333;
+    $white: #FFFFFF;
+
+//Element color definitions
+    //Header / nav
+    $header-bg: $ot-navy;
+
+    $nav-bg: $ot-indigo;
+    $nav-text: $white;
+    $nav-text-selected: $ot-light-blue;
+    $nav-hover: $ot-light-blue;
+    $nav-text-hover: $white;
+    $nav-text-active: $ot-light-blue;
+
+    $breadcrumb-bg: $ot-indigo;
+    $breadcrumb-text: $white;
+
+    $subnav-bg: $ot-light-blue;
+    $subnav-text: $white;
+    $subnav-text-hover: rgba(255,255,255,0.3);
+    $subnav-text-active: $ot-indigo;
+    $subnav-hover: rgba(255,255,255,0.3);
+
+    $modal-bg: rgba(17, 27, 88, 0.95);
+    $modal-hover: $ot-light-blue;
+    $modal-active: $ot-light-blue;
+
+    //Sidebar nav
+    $sidebar-text: $ot-steel;
+    $sidebar-active: $light-grey;
+    $sidebar-text-active: $ot-light-blue;
+    $sidebar-text-hover: $ot-light-blue;
+    $sidebar-width: 16rem;
+
+    //Base Typography
+    $body-text:  $dark-grey;
+    $inverse-text: $white;
+    $hyperlink: $ot-light-blue;
+
+    //Banners
+    $banner-section: $ot-light-blue;
+    $banner-page: $ot-indigo;
+    $banner-bg: $ot-cloud;
+
+    //Content area:
+    $content-bg: $light-grey;
+    $content-heading: $ot-indigo;
+    $content-subhead: $ot-indigo;
+
+    //Callouts
+    $keyline: #cccccc;
+    $caption: $med-grey;
+    $highlight: lighten($ot-cloud, 4%);
+
+    //rules
+    $do: #1FCC40;
+    $do-not: #EC1C24;
+
+    //quick links
+    $quick-links-bg: $white;
+    $quick-links: $ot-indigo;
+
+    //Swatches
+    $swatch-type: $ot-steel;
+    $swatch-text:  $dark-grey;
+    $swatch-notification-bg: rgba(17, 27, 88, 0.95);
+    $swatch-title-light: $white;
+    $swatch-title-dark: $med-grey;
+
+    //hero banner
+    $hero-text: $white;
+
+    //Home
+    $home-heading: $ot-indigo;
+    $home-callout-title: $ot-indigo;
+    $home-callout-description: $med-grey;
+
+    //Home - Pathways
+    $pathways-bg: $ot-indigo;
+
+    //Tabs
+    $tab-indicator: $ot-indigo;
+    $tab-text: $dark-grey;
+    $accordion: $white;
+    $tab-text-hover: $ot-light-blue;
+
+    //Tables
+    $table-header-bg: $ot-indigo;
+    $table-highlight: lighten($ot-cloud, 4%);
+
+
+    //Buttons
+        //Primary
+        $button-primary: $white;
+        $button-primary-bg: $ot-indigo;
+        $button-primary-bg-hover: lighten($ot-indigo, 10%);
+
+        ///Secondary
+        $button-secondary: $ot-indigo;
+        $button-secondary-bg: transparent;
+        $button-secondary-bg-hover: lighten($ot-indigo, 50%);
+
+    //Footer
+    $footer-bg: $light-grey;
+    $footer-border: rgba(0, 0, 0, 0.1);
+
+//Media Queries
+$phablet: 480px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;

@@ -1,0 +1,208 @@
+/** BEGIN: FONDLESLAB *********************************************************/
+
+html.fondleslab
+{
+  overflow:hidden;
+}
+
+.fondleslab-root
+{
+  background-image:url(/images/opentext-logos/OpenText-Logo-INV-2017.png);
+  background-repeat:no-repeat;
+  background-position:center;
+  width:100vw;
+  height:100vh;
+  -moz-user-select:none;
+  user-select:none;
+}
+
+/** BEGIN: Fondleslab Pads ------------------------------------------------- **/
+
+.fondleslab-pads
+{
+  position:absolute;
+  top:0vh;
+  left:0vw;
+  z-index:1;
+  width:100vw;
+  height:100vh;
+  columns:3;
+  column-gap:0px;
+}
+
+.fondleslab-pads-enter-active,
+.fondleslab-pads-leave-active
+{
+  transition-property:top,left,transform,opacity;
+  transition-duration:1.0s;
+  transition-timing-function:ease;
+}
+
+.fondleslab-pads-enter,
+.fondleslab-pads-leave-to
+{
+  top:200vh;
+  left:-200vw;
+  transform:scale(2.0);
+  opacity:0.1
+}
+
+.fondleslab-pads-leave,
+.fondleslab-pads-enter-to
+{
+  top:0vh;
+  left:0vw;
+  transform:scale(1.0);
+  opacity:1.0;
+}
+
+.fondleslab-pad
+{
+  position:relative;
+  top:0px;
+  left:0px;
+  padding:1vh 2vw 1vh 2vw;
+  border-style:none solid solid none;
+  border-width:1px;
+  border-color:white;
+  background-color:rgba(255,0,0,0.9);
+  color:var(--ot-white);
+}
+
+/* Prevent elements inside from receiving clicks */
+.fondleslab-pad > *
+{
+  pointer-events:none;
+
+}
+
+.fondleslab-pad-vhalf
+{
+  height:50vh;
+}
+
+.fondleslab-pad-vquarter
+{
+  height:25vh;
+}
+
+.fondleslab-pad-label
+{
+  position:absolute;
+  bottom:2vh;
+  right:2vw;
+  font-size:5vw;
+  text-align:right;
+}
+
+#fp_pad_agenda
+{
+  background-color:var( --ot-red-90 );
+}
+
+#fp_pad_map
+{
+  background-color:var( --ot-black-90 );
+  color:var( --ot-white );
+}
+
+#fp_pad_expo
+{
+  background-color:var( --ot-grey-90 );
+}
+
+#fp_pad_events
+{
+  background-color:var( --ot-blue-90 );
+}
+
+#fp_pad_games
+{
+  background-color:var( --ot-clear-90 );
+}
+
+#fp_pad_social
+{
+  background-color:var( --ot-teal-90 );
+}
+
+#fp_pad_sponsors
+{
+  background-color:var( --ot-purple-90 );
+}
+
+/** END: Fondleslab Pads --------------------------------------------------- **/
+
+/** BEGIN: Fondleslab Content ---------------------------------------------- **/
+
+.fondleslab-content
+{
+  z-index:-1;
+  width:100vw;
+  height:100vh;
+}
+
+.fondleslab-screen
+{
+  position:absolute;
+  width:100vw;
+  height:100vh;
+  font-size:5vw;
+  color:white;
+  /*background-color:green;*/
+}
+
+.fondleslab-screen-enter-active,
+.fondleslab-screen-leave-active
+{
+  transition-property:top,left,transform,opacity;
+  transition-duration:1.0s;
+  transition-timing-function:ease;
+}
+
+.fondleslab-screen-enter,
+.fondleslab-screen-leave-to
+{
+  top:-200vh;
+  left:-200vw;
+  transform:scale(2.0);
+  opacity:0.1;
+  /*background-color:yellow;*/
+}
+
+.fondleslab-screen-leave,
+.fondleslab-screen-enter-to
+{
+  top:0vh;
+  left:0vw;
+  transform:scale(1.0);
+  opacity:1.0;
+  /*background-color:orange;*/
+}
+
+.fondleslab-screen-close
+{
+  display:inline-block;
+  position:absolute;
+  top:1vw;
+  right:1vw;
+  z-index:1;
+  background-color:rgba(0,0,0,0.5);
+  color:rgba(255,255,255,0.5);
+  font-size:1vw;
+  line-height:1vw;
+  text-align:center;
+  vertical-align:middle;
+  width:3vw;
+  height:3vw;
+}
+
+
+#fp_screen_games
+{
+  background-color:var(--ot-white-90);
+}
+
+/** END: Fondleslab Content ------------------------------------------------ **/
+
+/** END: FONDLESLAB ***********************************************************/

@@ -1,0 +1,83 @@
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/ew-2018-background.png") #fff;
+    background-size: cover;
+    font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+}
+
+/* Header bar */
+header {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 14px;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+header img {
+    width: auto;
+    height: 25px;
+}
+
+
+/* Basic carousel slide styles */
+
+.cycle-slideshow {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    margin-top:25px;
+}
+
+.cycle-slide {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+
+/* Coming Soon */
+.comingSoon{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+
+}
+.panel{
+    align-self:center;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 5vh;
+    line-height: 6vh;
+    text-align:center;
+}
+
+#countdown {
+    color: #2E3D98;
+    font-size: 8vh;
+    line-height: 9vh;
+    margin-top:25px;
+}
+
+.units {
+    color: #000;
+}

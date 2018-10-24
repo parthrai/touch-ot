@@ -1,0 +1,16 @@
+{
+    "name": "parths/twitter",
+    "description": "twitter streaming for laravel",
+    "type": "MIT",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Parth Rai",
+            "email": "parthrai2@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "fennb/phirehose": "^1.0"
+    }
+}

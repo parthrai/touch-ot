@@ -1,0 +1,48 @@
+/** BEGIN: OpenText Brand Colours *********************************************/
+
+$ot_black:  #000000;
+$ot_white:  #FFFFFF;
+
+$ot_blue:   #2E3D98;
+$ot_red:    #D92A32;
+$ot_grey:   #7E929F;
+$ot_teal:   #00B8BA;
+$ot_purple: #4F3690;
+
+$ot_clear:  #09BCEF;
+
+:root
+{
+
+  --ot-black:  #000000;
+  --ot-white:  #FFFFFF;
+  --ot-blue:   #2E3D98;
+  --ot-red:    #D92A32;
+  --ot-grey:   #7E929F;
+  --ot-teal:   #00B8BA;
+  --ot-purple: #4F3690;
+  --ot-clear:  #09BCEF;
+
+  /** 90% Opacity ---------------------------------------------------------- **/
+  --ot-black-90:  rgba( 0, 0, 0, 0.9 );
+  --ot-white-90:  rgba( 255, 255, 255, 0.9 );
+  --ot-blue-90:   rgba( 46, 61, 152, 0.9 );
+  --ot-red-90:    rgba( 217, 42, 50, 0.9 );
+  --ot-grey-90:   rgba( 126, 146, 159, 0.9 );
+  --ot-teal-90:   rgba( 0, 184, 186, 0.9 );
+  --ot-purple-90: rgba( 79, 54, 144, 0.9 );
+  --ot-clear-90:  rgba( 9, 188, 239, 0.9 );
+
+  /** 50% Opacity ---------------------------------------------------------- **/
+  --ot-black-50:  rgba( 0, 0, 0, 0.5 );
+  --ot-white-50:  rgba( 255, 255, 255, 0.5 );
+  --ot-blue-50:   rgba( 46, 61, 152, 0.5 );
+  --ot-red-50:    rgba( 217, 42, 50, 0.5 );
+  --ot-grey-50:   rgba( 126, 146, 159, 0.5 );
+  --ot-teal-50:   rgba( 0, 184, 186, 0.5 );
+  --ot-purple-50: rgba( 79, 54, 144, 0.5 );
+  --ot-clear-50:  rgba( 9, 188, 239, 0.5 );
+
+}
+
+/** END: OpenText Brand Colours ***********************************************/

@@ -1,0 +1,52 @@
+dist: trusty
+sudo: required
+language: php
+php:
+  - 7.1
+before_install:
+  - echo "Running - before_install"
+  - mysql -V
+  - mysql -e 'DROP DATABASE IF EXISTS leaderboard;'
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS leaderboard;'
+before_script:
+  - echo "Running - before_script"
+  - cp .travis/.travis.env .env
+  - cp .travis/.travis.phpunit.xml phpunit.xml
+  - composer self-update
+  - composer install --no-interaction
+  - npm install
+  - npm run development
+  - npm run production
+services:
+  - redis-server
+  - mysql
+cache:
+  directories:
+    - vendor
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
+jobs:
+  include:
+    - stage: test
+      php: 7.1
+      script:
+        - echo "Running - test"
+        - php artisan key:generate
+        - php artisan migrate
+        - php artisan migrate:rollback
+        - php artisan migrate
+        - php artisan db:seed
+        - vendor/bin/phpunit --colors
+    - stage: deploy
+      script:
+      - echo "Running - deploy"
+      - bash .travis/.travis-deploy.sh
+stages:
+  - test
+  - name: deploy
+    if: branch = master

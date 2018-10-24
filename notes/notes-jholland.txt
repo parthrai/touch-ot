@@ -1,0 +1,24 @@
+leaderboards fail to load properly sometimes
+
+
+
+leaderboards: https://getbootstrap.com/docs/3.3/css/#responsive-utilities
+
+cache bust: http://otew.test/css/app.css
+
+
+
+
+
+
+
+## SETUP: ######################################################################
+
+
+Initial-Setup-EventsApp-Staging
+
+
+
+cd /home/forge/testing.otew.io/ ; php artisan ot-scoreboard:fetch-new-points
+cd /home/forge/testing.otew.io/ ; php artisan ot-socialcards:fetch-new-posts
+cd /home/forge/testing.otew.io/ ; php artisan ot-socialcards:fetch-new-tweets

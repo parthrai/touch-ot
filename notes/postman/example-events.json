@@ -1,0 +1,74 @@
+[
+  {
+      "uuid": "4479096f-bd1c-4ac5-9ea0-5dd2eabd7aef",
+      "name": "Enterprise World 2018",
+      "timeZone": "America/Toronto",
+      "eulaId": "9027bcb8-e09f-45b3-aaa7-e4b9144bc3b2",
+      "supportedLanguages": [
+          "EN"
+      ],
+      "startDate": 1530936000000,
+      "endDate": 1531454400000,
+      "gamificationEnabled": true,
+      "eventRules": {
+          "staffAttendeeTypes": [],
+          "surveySessionTypes": [
+              "c73cd0d0-f2d8-406d-8d6b-8bfbd7b4fd7e",
+              "5fddb22f-18cf-4fe6-a281-83956d145fff"
+          ],
+          "sessionTypeVisibility": {
+              "7d2c3246-e9fc-41e0-aa2a-692e5e25bbcd": [
+                  "49fddc0a-47b9-4ab5-a235-39dd47bcd849",
+                  "b12142d7-ef75-4ddd-91e3-fd805aa4af51",
+                  "523fcb25-4717-4a83-80b4-5b99af5c2304",
+                  "feaa1fda-cc3e-4eeb-b968-ee19e6f5617b",
+                  "df0b66f4-1f39-4812-a9d4-8b0db2d5e2d9"
+              ],
+              "c5bb5239-4c6d-4766-80a5-e62fe7fc5e35": [
+                  "b12142d7-ef75-4ddd-91e3-fd805aa4af51",
+                  "e1b7e461-aa5b-4c2c-b5d1-63fe7fff23c2",
+                  "523fcb25-4717-4a83-80b4-5b99af5c2304"
+              ],
+              "6735a148-1555-42fb-a34a-38ff26757c0d": [
+                  "523fcb25-4717-4a83-80b4-5b99af5c2304"
+              ],
+              "02822c1d-e6d2-4974-8452-260717640986": [
+                  "523fcb25-4717-4a83-80b4-5b99af5c2304",
+                  "feaa1fda-cc3e-4eeb-b968-ee19e6f5617b"
+              ],
+              "b6aa81a6-f4d8-4c5b-91ee-9dfff8f52286": [
+                  "b12142d7-ef75-4ddd-91e3-fd805aa4af51",
+                  "523fcb25-4717-4a83-80b4-5b99af5c2304"
+              ],
+              "7dc2adb6-d42c-41ce-848d-d11a2d53644e": [
+                  "00298a46-17c4-42dd-ba41-bed87a6614a7"
+              ]
+          },
+          "sessionVisibility": {}
+      },
+      "photo": {
+          "uuid": "274871ad-e52e-4a2e-a6d0-5b9d13b19813",
+          "fileName": "EW2018-OpenText-Exhibitor-Photo-800x800-FINAL (1).jpg",
+          "fileExtension": "jpg",
+          "publicUrl": "/appworks-conference-service/content/4m/my/274871ad-e52e-4a2e-a6d0-5b9d13b19813.jpg",
+          "title": "Photo of event Enterprise World 2018"
+      },
+      "emailImage": {
+          "uuid": "c1a61390-e178-411a-b533-cf6c7e8c4513",
+          "fileName": "notes-banner.png",
+          "fileExtension": "png",
+          "publicUrl": "/appworks-conference-service/content/3e/py/c1a61390-e178-411a-b533-cf6c7e8c4513.png",
+          "title": "EmailImage of event Enterprise World 2018"
+      },
+      "venueInfoImage": {
+          "uuid": "865afb9b-e5c1-4b92-a007-a71eac8cbab0",
+          "fileName": "notes-banner.png",
+          "fileExtension": "png",
+          "publicUrl": "/appworks-conference-service/content/xy/zm/865afb9b-e5c1-4b92-a007-a71eac8cbab0.png",
+          "title": "Venue info image for event Enterprise World 2018"
+      },
+      "emailText": "Thank you for attending Enterprise World 2018. Please find below your notes taken using the Enterprise World mobile app.",
+      "active": false,
+      "visible": false
+  }
+]

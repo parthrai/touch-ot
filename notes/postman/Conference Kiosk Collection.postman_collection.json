@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "3aa15201-070c-4b50-ae1e-e8a12623584c",
+		"name": "Conference Kiosk Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "16053f73-a332-41eb-831f-5de202537a01",
+						"type": "text/javascript",
+						"exec": [
+							"console.log('setting OTAG_TOKEN to ' + pm.response.json().otagtoken)",
+							"pm.globals.set(\"OTAG_TOKEN\", pm.response.json().otagtoken);",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"scittadi@opentext.com\",\n  \"password\": \"opentext\",\n  \"runtime\": \"event-kiosk\",\n  \"clientData\": {\n    \"clientInfo\": {\n      \"type\": \"web\",\n      \"app\": \"event-kiosk\",\n      \"runtime\": \"event-kiosk\",\n      \"version\": \"1.0\",\n      \"os\": \"Android\"\n    }\n  }\n}"
+				},
+				"url": {
+					"raw": "https://appworks.opentext.com/v3/admin/auth",
+					"protocol": "https",
+					"host": [
+						"appworks",
+						"opentext",
+						"com"
+					],
+					"path": [
+						"v3",
+						"admin",
+						"auth"
+					]
+				},
+				"description": "Log in to the API. We need the client data section of the JSON payload to identify this client type. We are using the default creds assinged to Stephen here. The \"otagToken\" in the response can be used to traverse the API, include it as an \"otagToken\" header."
+			},
+			"response": []
+		},
+		{
+			"name": "Get the events",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "43c105eb-a7a7-4892-928e-d519329cd37f",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"//pm.globals.set(\"EVENT_UUID\", pm.response.json().otagtoken);",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "otagToken",
+						"value": "{{OTAG_TOKEN}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://appworks.opentext.com/appworks-conference-service/api/v2/events",
+					"protocol": "https",
+					"host": [
+						"appworks",
+						"opentext",
+						"com"
+					],
+					"path": [
+						"appworks-conference-service",
+						"api",
+						"v2",
+						"events"
+					]
+				},
+				"description": "Get the events that are currently visible. There should only be one in production at the moment. We need to use its \"uuid\" in subsequent data access calls to tell the API which Event we are interested in."
+			},
+			"response": []
+		},
+		{
+			"name": "Get an events data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "otagToken",
+						"value": "{{OTAG_TOKEN}}"
+					},
+					{
+						"key": "AW_EVENTS_EVENT_ID",
+						"value": "{{EVENT_UUID}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://appworks.opentext.com/appworks-conference-service/api/v2/conference",
+					"protocol": "https",
+					"host": [
+						"appworks",
+						"opentext",
+						"com"
+					],
+					"path": [
+						"appworks-conference-service",
+						"api",
+						"v2",
+						"conference"
+					]
+				},
+				"description": "Get ALL of the data for this event as a JSON object.\n\nLook in the \"conferenceDays\" for a collection of the sessions broken into the constituent days, the \"exhibitors\" member should have all of the information.\n\nThis call takes around 1 second, and doesn't need to be polled too often, we can report a change to this data over push to a web page now so can inform you when to update.\n\nNOTE: We pass the AW_EVENTS_EVENT_ID header, in it we place an Events uuid."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "71abcf58-6e72-4a99-8654-816dfafb38bd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7d3bf4ae-c859-4dc0-9f3c-248876f3a4d5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "e7372599-52de-4146-9b20-bf152c562556",
+			"key": "OTAG_TOKEN",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "b56d7d99-b658-4be4-9e06-a665d0675916",
+			"key": "EVENT_UUID",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

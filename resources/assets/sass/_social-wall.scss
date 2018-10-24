@@ -1,0 +1,21 @@
+html.wonder-wall
+{
+  overflow-x:hidden;
+  overflow-y:hidden;
+  body.wonder-wall
+  {
+    background-image:url("/images/backgrounds/inkblot.png");
+    background-attachment:fixed;
+    background-size:cover;
+    background-repeat:no-repeat;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    #app
+    {
+      width:100vw;
+      height:100vh;
+      overflow-x:hidden;
+      overflow-y:hidden;
+    }
+  }
+}

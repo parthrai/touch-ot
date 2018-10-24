@@ -1,0 +1,84 @@
+/******************************************************************************/
+
+.admin-sns-container
+{
+  overflow-x:auto;
+}
+
+.table-admin-sns
+{
+  th
+  {
+    white-space:nowrap;
+  }
+}
+
+.list-inline .btn
+{
+  margin-bottom:10px;
+}
+
+.list-inline .modal .btn
+{
+  margin-bottom:0px;
+}
+
+/** COLOURS *******************************************************************/
+
+.text-primary
+{
+  color:$brand-primary;
+}
+
+.text-info
+{
+  color:$brand-info;
+}
+
+.text-success,
+.panel-success
+{
+  color:$brand-success;
+}
+
+.text-warning
+{
+  color:$brand-warning;
+}
+
+.text-danger
+{
+  color:$brand-danger;
+}
+
+/** BEGIN: Expo Stands Coordinates ********************************************/
+
+.expo-stands-coordinates-picker
+{
+  position:relative;
+  border-style:dotted;
+  border-width:4px;
+  border-color:#000000;
+}
+
+.expo-stands-blackspot
+{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+/** END: Expo Stands Coordinates **********************************************/
+
+/** BEGIN: Bootstrap Overrides ************************************************/
+
+.text-muted // Overrides Bootstrap style
+{
+  color:rgb(200,200,200);
+  .text-primary
+  {
+    color:rgb(200,200,200);
+  }
+}
+
+/** END: Bootstrap Overrides **************************************************/

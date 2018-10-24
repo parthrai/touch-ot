@@ -1,0 +1,16 @@
+leaderboard
+
+team list
+
+cloud image
+
+coordinates
+
+
+agenda announcement
+
+
+
+
+add override columns 
+hide/show manually edited events
